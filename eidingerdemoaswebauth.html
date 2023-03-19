@@ -1,0 +1,14 @@
+<html>
+<h1>Test page for "Debugging ASWebAuthenticationSession"</h1>
+<p>Logs some work every half second and finally triggers custom url scheme: eidingerdemoaswebauth://</p>
+<script>
+setInterval(doSomething, 500);
+setTimeout(callCustomURLScheme, 20000)
+function doSomething() {
+  console.log("did something: " + Math.random() * 100);
+}
+function callCustomURLScheme() {
+  window.location = "eidingerdemoaswebauth://auth?token=1234"
+}
+</script>
+</html>
