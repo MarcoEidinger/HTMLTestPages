@@ -3,6 +3,7 @@
 <h1>Test page for "Debugging ASWebAuthenticationSession"</h1>
 <p>Logs some work every half second and finally triggers custom url scheme: eidingerdemoaswebauth://</p>
 <script>
+console.log("begin work!");
 setInterval(doSomething, 500);
 setTimeout(callCustomURLScheme, 20000)
 function doSomething() {
